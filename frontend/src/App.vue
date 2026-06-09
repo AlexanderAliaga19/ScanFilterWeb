@@ -51,7 +51,7 @@ const processImage = async () => {
   formData.append('y', y.value)
 
   try {
-    const response = await axios.post('http://127.0.0.1:8000/api/process-image/', formData, {
+    const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/process-image/`, formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
